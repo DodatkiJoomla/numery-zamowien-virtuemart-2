@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<extension version="2.5" type="plugin" method="upgrade" group="vmshopper" >
+	<name>Numery zamówień dla Virtuemart 2</name>
+	<creationDate>2014-07-31</creationDate>
+    <author>Dodatkijoomla.pl</author>
+    <copyright>Copyright (c) 2014 DodatkiJoomla.pl</copyright>
+    <license>GNU/GPL v2</license>
+    <authorEmail>kontakt@dodatkijoomla.pl</authorEmail>
+    <authorUrl>http://dodatkijoomla.pl</authorUrl>
+    <version>1.0.0</version>
+	<description>
+		<![CDATA[ 	
+		
+		Plugin numerów zamówień dla Virtuemart 2 - ustawia format liczbowy dla numerów zamówień.<br />
+		Pozwala także w konfiguracji ustawić wiodące zera (domyślnie wyłączone).
+		
+		]]> 
+	</description>
+	
+	<files>
+		<filename plugin="vm2_numery_zamowien">vm2_numery_zamowien.php</filename>
+		<!-- Przesyłam instaluj.php, żeby nadpisywał stary plik instalacyjny. 
+		<filename>instaluj.php</filename>-->
+	</files>
+	
+	<!--
+	<updateservers>
+		<server type="extension" name="Aktualizacje Dodatkijoomla.pl"></server>
+	</updateservers>
+	-->
+
+	<!-- Skrypty wywoływane podczas instalacji 
+	<scriptfile>instaluj.php</scriptfile>-->
+	
+	<!-- Pliki językowe 
+	<languages>
+		<language tag="en-GB"></language>
+    </languages>-->
+    
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="zero_pad" type="list" default="0" label="Wiodące zera w numerze" description="Jeśli ustawisz na TAK - numer zamówienia będzie posiadał wiodące zera.">
+                    <option value="0">Nie</option>
+                    <option value="1">Tak</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+
+</extension>
